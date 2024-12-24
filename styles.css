@@ -1,0 +1,63 @@
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        header {
+            padding: 80px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        header p {
+            font-size: 1.6rem;
+            margin: 10px 0;
+            font-style: italic;
+            color: #ffdf00;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .time {
+            font-size: 3rem;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ffea00;
+        }
+        .date {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: lighter;
+        }
+        footer {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        footer a {
+            color: #ffdf00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
