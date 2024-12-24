@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hai, Semua!</h1>
+        <p>Jangan pernah merasa khawatir tentang kegagalan, akan tetapi khawatirlah tentang peluang yang telah kamu lewatkan ketika kamu tidak mencoba untuk melakukan sesuatu.</p>
+        <div class="time" id="clock">Loading...</div>
+        <div class="date" id="date">Loading...</div>
+    </header>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        function updateDate() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString('id-ID', options);
+            document.getElementById('date').textContent = dateString;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // To display time immediately when page loads
+        updateDate(); // To display date immediately when page loads
+    </script>
+</body>
+</html>
